@@ -3,12 +3,14 @@
 // Return the result
 
 function deleteIfHas (set, val) {
+    
     if (set.has(val) === true) {
         set.delete(val)
-        return console.log(set)
-    } else {
-        return console.log(set);
+        return set
     }
+    
+    return set;
+    
 }
 
 deleteIfHas(new Set([1, 2, 3]), 1)
