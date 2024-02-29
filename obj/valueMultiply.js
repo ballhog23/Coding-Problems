@@ -9,5 +9,5 @@ function myFunction(a, b) {
 }
 
 myFunction({ a: 1, b: 2, c: 3 }, 3)
-// myFunction({ j: 9, i: 2, x: 3, z: 4 }, 10)
-// myFunction({ w: 15, x: 22, y: 13 }, 6)
+myFunction({ j: 9, i: 2, x: 3, z: 4 }, 10)
+myFunction({ w: 15, x: 22, y: 13 }, 6)
