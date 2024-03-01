@@ -6,7 +6,8 @@
  * @return {Function} counter
  */
 const createCounter = function (n) {
-    //  the counter first logs n and then increments the number with each subsequent call
+    // the counter first logs n and then increments the number with each subsequent call
+    // the trick is the post increment operator
     return () => console.log(n++)
 };
 
