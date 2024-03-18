@@ -42,7 +42,7 @@ function swapTwo(numbers) {
 // swap([1])
 // swap([])
 
-swapTwo([1,5,3,7,2,7,3])
+// swapTwo([1,5,3,7,2,7,3])
 // swapTwo([1,6,2,7,9,3,4])
 // swapTwo([1,0])
 // swapTwo([1])
