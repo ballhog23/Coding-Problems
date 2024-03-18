@@ -30,8 +30,6 @@ function swapTwo(numbers) {
     
     array.unshift(last);
     array.push(first);
-    
-    console.log(numbers)
 
     return array
 }
