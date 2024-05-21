@@ -18,14 +18,6 @@ function either404(numbers) {
             return false;
         }
     }
-
-    if (zeroNextToZero || fourNextToFour) {
-        console.log('true');
-        return true;
-    } else {
-        console.log('false');
-        return false;
-    }
 }
 
 // Test cases
