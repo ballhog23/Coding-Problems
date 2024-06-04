@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Calc</title>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <form>
+        <section>
+            <label for="liability-tiers">Choose a Liability Tier:</label>
+            <br />
+            <select name="liability-tiers" id="liability-tiers" required>
+                <option value="0" selected="selected" disabled>Select a Tier</option>
+                <option value="75">100000/$300,000</option>
+                <option value="150">200000/$400,000</option>
+                <option value="250">300000/$600,000</option>
+            </select>
+        </section>
+        <br />
+        <section>
+            <label for="state">Choose a State:</label>
+            <br />
+            <select name="state" id="state" required>
+                <option value="0" selected="selected" disabled>Select a State</option>
+                <option value="400">California</option>
+                <option value="400">Florida</option>
+                <option value="200">Idaho</option>
+                <option value="300">Illinois</option>
+                <option value="300">Kentucky</option>
+                <option value="300">Oregon</option>
+                <option value="400">Texas</option>
+                <option value="200">Utah</option>
+                <option value="200">Wyoming</option>
+            </select>
+        </section>
+        <br />
+        <section>
+            <label for="equipment-insurance">Select Equipment Insurance:</label>
+            <br />
+            <select name="equipment-insurance" id="equipment-insurance" required>
+                <option value="0" selected="selected" disabled>Select Equipment Insurance</option>
+                <option value="25">Tier 1</option>
+                <option value="50">Tier 2</option>
+                <option value="75">Tier 3</option>
+            </select>
+        </section>
+        <br />
+        <input type="button" name="button" value="Calculate Price" id="calculate-button"/>
+    </form>
+    <br />
+    <p>Total Price: <span id="price">0</span></p>
+    
+</body>
+
+</html>
