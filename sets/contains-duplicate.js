@@ -6,10 +6,12 @@ var containsDuplicate = function(nums) {
     const uniqueSet = new Set();
 
     for (let i = 0; i < nums.length; i ++) {
+        // if the set contains the current iteration of nums, then return true to end the program
         if (uniqueSet.has(nums[i])) return true;
         else uniqueSet.add(nums[i])
     }
 
+    // otherewise the set contains no duplicates
     return false;
 };
 
