@@ -7,13 +7,21 @@ function checkPassword(password, password_repeat) {
 
     if (password.length < 8) return false
 
-    //! NOTE: This was my original attempt to validate via regex: /(\d+)([a-zA-Z]+)([\-\_\&\$\%\§]+)/g
-    // Pattern Matching: Uses a regex pattern to validate:
-    // (?=.*\d): Requires at least one digit.
-    // (?=.*[a-z]): Requires at least one lowercase letter.
-    // (?=.*[A-Z]): Requires at least one uppercase letter.
-    // (?=.*[&$%§\-_]): Requires at least one special character from [&$%§\-_].
-    // [a-zA-Z\d&$%§\-_]{8,}: Allows only characters from the specified set and ensures the password is at least 8 characters long.
+    /**
+    * ! NOTE: This was my original attempt to validate via regex: /(\d+)([a-zA-Z]+)([\-\_\&\$\%\§]+)/g
+    * 
+    * * Pattern Matching: Uses a regex pattern to validate:
+    * (?=.*\d): Requires at least one digit.
+    * (?=.*[a-z]): Requires at least one lowercase letter.
+    * (?=.*[A-Z]): Requires at least one uppercase letter.
+    * (?=.*[&$%§\-_]): Requires at least one special character from [&$%§\-_].
+    * [a-zA-Z\d&$%§\-_]{8,}: Allows only characters from the specified set and ensures the password is at least 8 characters long.
+    * 
+    * ! Positive Lookaheads and .*:
+    * (?=.*\d): This positive lookahead asserts that somewhere in the string (.*) there exists (?=) at least one digit (\d).
+    * The .* part matches any sequence of characters (including none at all),
+    * allowing the regex engine to look ahead throughout the string to find a digit.
+    */
 
     const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[&$%§\-_])[a-zA-Z\d&$%§\-_]{8,}$/gm;
 
