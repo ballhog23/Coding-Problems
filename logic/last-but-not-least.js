@@ -1,3 +1,7 @@
+// verbose and imperative, works... but unneccessary code like filtering, tracking state and not using early returns,
+// apparently arguemnts is not es6 and should use ...args, multiple loops
+// no need to convert to string, could have used modulo to get remainder...
+
 // function lastButNotLeast(a, b, c) {
 //     let lastDigitArray = [];
 //     let digitCheck = false;
