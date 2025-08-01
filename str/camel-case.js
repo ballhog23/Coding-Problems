@@ -1,17 +1,11 @@
 function camelCase(str) {
-    let trimmed = str.trim();
-    trimmed = trimmed.charAt(0).toLowerCase() + trimmed.slice(1);
-    // const regex = /(?<=\s)(\w)/g;
-    const regex = /\s(?<toCamel>\w)/g;
-    let exec = regex.exec(trimmed);
-    let array;
-
-    // console.log(exec)
-    
-    while ((array = regex.exec(trimmed)) !== null) {
-        console.log(array)
-    }
-
+    const trimmed = str.trim();
+    const explode = trimmed.split(' ');
+    const toUpper  = explode
+      .filter( i =>i !== '')
+      .map(i => i[0].toUpperCase() + i.slice(1, i.length))
+    const join = toUpper.join('');
+    return join.charAt(0).toLowerCase() + join.slice(1, join.length)
 }
 
 
