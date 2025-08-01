@@ -1,7 +1,7 @@
 function camelCase(str) {
     const trimmed = str.trim();
     const explode = trimmed.split(' ');
-    const toUpper  = explode
+    const toUpper = explode
       .filter( i =>i !== '')
       .map(i => i[0].toUpperCase() + i.slice(1, i.length))
     const join = toUpper.join('');
